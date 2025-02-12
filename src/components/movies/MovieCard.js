@@ -9,10 +9,14 @@ export default function MovieCard({
   rating, 
   duration, 
   releaseDate,
+  genre,
+  description,
+  director,
+  cast,
   onBookClick 
 }) {
   return (
-    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-[200px]">
+    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-[200px] hover:scale-105 transition-transform duration-300 flex flex-col">
       <div className="relative w-[200px] h-[300px]">
         <Image
           src={posterUrl}
@@ -25,20 +29,46 @@ export default function MovieCard({
         </div>
       </div>
       
-      {/* Moive Infomation */}
-      <div className="p-4">
-        <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-        <div className="flex items-center gap-4 text-gray-300 text-sm mb-4">
-          <span>{duration}</span>
-          <span>{releaseDate}</span>
+      <div className="p-4 flex-1 flex flex-col">
+        <div className="space-y-3 flex-1">
+          <h3 className="text-lg font-bold text-white">{title}</h3>
+          
+          {/* 類型標籤 */}
+          <div className="flex flex-wrap gap-1">
+            {genre?.map((g, index) => (
+              <span key={index} className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">
+                {g}
+              </span>
+            ))}
+          </div>
+
+          {/* 基本資訊 */}
+          <div className="text-gray-300 text-sm space-y-1">
+            <div className="flex items-center gap-2">
+              <span>{duration}</span>
+              <span>•</span>
+              <span>{releaseDate}</span>
+            </div>
+            <div>導演：{director}</div>
+            <div className="truncate">演員：{cast?.join('、')}</div>
+          </div>
+
+          {/* 描述 */}
+          <p className="text-sm text-gray-400 line-clamp-3">
+            {description}
+          </p>
         </div>
-        <Button
-          variant="primary"
-          className="w-full"
-          onClick={onBookClick}
-        >
-          立即訂票
-        </Button>
+
+        {/* 按鈕 - 固定在底部 */}
+        <div className="mt-4">
+          <Button
+            variant="primary"
+            className="w-full"
+            onClick={onBookClick}
+          >
+            立即訂票
+          </Button>
+        </div>
       </div>
     </div>
   );
