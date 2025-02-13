@@ -63,20 +63,20 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 p-8">
+    <main className="min-h-screen bg-gray-900 p-8">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Button test*/}
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-bold text-white mb-4">測試按鈕</h2>
           <Button onClick={() => alert('被點擊了！')}>
             點擊
           </Button>
-        </div>
+        </div> */}
 
         {/* MovieCard test*/}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">電影清單</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {moviesData.map((movie, index) => (
               <MovieCard
                 key={index}
@@ -87,6 +87,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

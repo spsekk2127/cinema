@@ -16,13 +16,15 @@ export default function MovieCard({
   onBookClick 
 }) {
   return (
-    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-[200px] hover:scale-105 transition-transform duration-300 flex flex-col">
-      <div className="relative w-[200px] h-[300px]">
+    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-[275px] sm:w-[225px] lg:w-[200px] hover:scale-105 transition-transform duration-300 flex flex-col">
+      <div className="relative aspect-[2/3]">
         <Image
           src={posterUrl}
           alt={title}
           fill
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={100}
         />
         <div className="absolute top-2 right-2 bg-yellow-500 text-black px-2 py-1 rounded-lg font-bold z-10">
           {rating}
