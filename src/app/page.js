@@ -1,28 +1,18 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-// import Button from '@/components/ui/Button';
 import MovieCard from '@/components/movies/MovieCard';
-import { getMovies } from '@/services/movies_data_Service'
-
-
+import { useMovies } from '@/hooks/useMovies';
 
 export default function Home() {
-  const [moviesData, setMoviesData] = useState([]);
+  const { movies, isLoading, error } = useMovies();
 
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const data = await getMovies();
-        console.log(data)
-        setMoviesData(data);
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
-    };
+  if (isLoading) {
+    return <div className="min-h-screen bg-gray-900 p-8 text-white">載入中...</div>;
+  }
 
-    fetchMovies();
-  }, []);
+  if (error) {
+    return <div className="min-h-screen bg-gray-900 p-8 text-white">錯誤: {error}</div>;
+  }
 
   return (
     <main className="min-h-screen bg-gray-900 p-8">
@@ -39,7 +29,7 @@ export default function Home() {
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">電影清單</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {moviesData.map((movie, index) => (
+            {movies.map((movie, index) => (
               <MovieCard
                 key={index}
                 {...movie}

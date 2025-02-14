@@ -16,7 +16,7 @@ export default function MovieCard({
   onBookClick 
 }) {
   return (
-    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-[275px] sm:w-[225px] lg:w-[200px] hover:scale-105 transition-transform duration-300 flex flex-col">
+    <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-full hover:scale-105 transition-transform duration-300 flex flex-col">
       <div className="relative aspect-[2/3]">
         <Image
           src={posterUrl}
