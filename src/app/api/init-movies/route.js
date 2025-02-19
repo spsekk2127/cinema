@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const moviesCollection = collection(db, "movies");
+    const moviesCollection = collection(db, "movies_Data");
 
     // check if movies data already exists
     const existMovieData = await getDocs(moviesCollection);
@@ -19,7 +19,7 @@ export async function GET() {
     // write movies data to firestore
     const results = [];
     for (const movie of moviesData) {
-      await setDoc(doc(db, "movies", movie.id), {
+      await setDoc(doc(db, "movies_Data", movie.id), {
         ...movie,
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -34,7 +34,7 @@ export async function GET() {
     return NextResponse.json({
       message: "Movies data set successfully",
       count: results.length,
-      movies: results,
+      movies_Data: results,
     });
   } catch (error) {
     console.error("Error initializing movies data:", error);
