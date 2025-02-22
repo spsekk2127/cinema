@@ -17,14 +17,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 p-8">
       <div className="max-w-6xl mx-auto space-y-12">
-        {/* Button test*/}
-        {/* <div>
-          <h2 className="text-2xl font-bold text-white mb-4">測試按鈕</h2>
-          <Button onClick={() => alert('被點擊了！')}>
-            點擊
-          </Button>
-        </div> */}
-
         {/* MovieCard test*/}
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">電影清單</h2>

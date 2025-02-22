@@ -1,9 +1,11 @@
 "use client";
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import Button from '../ui/Button';
 
 export default function MovieCard({ 
+  id,
   title, 
   posterUrl, 
   rating, 
@@ -12,9 +14,19 @@ export default function MovieCard({
   genre,
   description,
   director,
-  cast,
-  onBookClick 
+  cast
 }) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (id) {
+      window.scrollTo(0, 0);
+      router.push(`/movies/${id}`);
+    } else {
+      console.error('No movie ID provided');
+    }
+  };
+
   return (
     <div className="bg-gray-800 rounded-xl overflow-hidden shadow-lg w-full hover:scale-105 transition-transform duration-300 flex flex-col">
       <div className="relative aspect-[2/3]">
@@ -35,7 +47,7 @@ export default function MovieCard({
         <div className="space-y-3 flex-1">
           <h3 className="text-lg font-bold text-white">{title}</h3>
           
-          {/* 類型標籤 */}
+          {/* type tag */}
           <div className="flex flex-wrap gap-1">
             {genre?.map((g, index) => (
               <span key={index} className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">
@@ -44,7 +56,7 @@ export default function MovieCard({
             ))}
           </div>
 
-          {/* 基本資訊 */}
+          {/* basic information */}
           <div className="text-gray-300 text-sm space-y-1">
             <div className="flex items-center gap-2">
               <span>{duration}</span>
@@ -55,18 +67,18 @@ export default function MovieCard({
             <div className="truncate">演員：{cast?.join('、')}</div>
           </div>
 
-          {/* 描述 */}
+          {/* description */}
           <p className="text-sm text-gray-400 line-clamp-3">
             {description}
           </p>
         </div>
 
-        {/* 按鈕 - 固定在底部 */}
+        {/* Button fixed at the bottom */}
         <div className="mt-4">
           <Button
             variant="primary"
             className="w-full"
-            onClick={onBookClick}
+            onClick={handleClick}
           >
             立即訂票
           </Button>
