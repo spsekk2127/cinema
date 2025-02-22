@@ -15,7 +15,7 @@ export async function getMovies() {
   }
 }
 
-export async function getMovieById(id) {
+export async function getMovieById(movieId) {
   try {
     const movieDoc = await getDoc(doc(db, "movies_Data", movieId));
     if (!movieDoc.exists()) {
@@ -27,6 +27,6 @@ export async function getMovieById(id) {
     };
   } catch (error) {
     console.error("Error getting movie:", error);
-    throw new Error("Error fetching movies");
+    throw error;
   }
 }
