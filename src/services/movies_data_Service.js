@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 import { db } from "@/firebase/config";
 
 export async function getMovies() {
@@ -11,7 +11,7 @@ export async function getMovies() {
     }));
   } catch (error) {
     console.error("Error fetching movies:", error);
-    throw error;
+    throw new Error("Error fetching movies");
   }
 }
 
@@ -27,6 +27,6 @@ export async function getMovieById(id) {
     };
   } catch (error) {
     console.error("Error getting movie:", error);
-    throw error;
+    throw new Error("Error fetching movies");
   }
 }
