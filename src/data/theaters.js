@@ -10,9 +10,6 @@ export const theatersData = [
       { id: "hall_1", name: "1廳", capacity: 40 },
       { id: "hall_2", name: "2廳", capacity: 45 },
       { id: "hall_3", name: "3廳", capacity: 50 },
-      { id: "hall_4", name: "4廳", capacity: 40 },
-      { id: "hall_5", name: "5廳", capacity: 45 },
-      { id: "hall_6", name: "6廳", capacity: 50 },
     ],
   },
   {
@@ -26,9 +23,6 @@ export const theatersData = [
       { id: "hall_1", name: "1廳", capacity: 40 },
       { id: "hall_2", name: "2廳", capacity: 45 },
       { id: "hall_3", name: "3廳", capacity: 50 },
-      { id: "hall_4", name: "4廳", capacity: 40 },
-      { id: "hall_5", name: "5廳", capacity: 45 },
-      { id: "hall_6", name: "6廳", capacity: 50 },
     ],
   },
   {
@@ -42,9 +36,6 @@ export const theatersData = [
       { id: "hall_1", name: "1廳", capacity: 40 },
       { id: "hall_2", name: "2廳", capacity: 45 },
       { id: "hall_3", name: "3廳", capacity: 50 },
-      { id: "hall_4", name: "4廳", capacity: 40 },
-      { id: "hall_5", name: "5廳", capacity: 45 },
-      { id: "hall_6", name: "6廳", capacity: 50 },
     ],
   },
 ];
