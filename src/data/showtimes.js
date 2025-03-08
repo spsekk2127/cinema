@@ -16,6 +16,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -36,6 +42,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
@@ -60,6 +72,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -80,6 +98,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
@@ -104,6 +128,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
     bookedSeats: [],
@@ -124,6 +154,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
@@ -148,6 +184,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
     bookedSeats: [],
@@ -168,6 +210,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
@@ -192,6 +240,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -212,6 +266,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
@@ -236,6 +296,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -256,6 +322,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
@@ -280,6 +352,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -300,6 +378,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
@@ -324,6 +408,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 45,
     availableSeats: generateSeats(45, "hall_2"),
     bookedSeats: [],
@@ -344,6 +434,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
@@ -368,6 +464,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
     bookedSeats: [],
@@ -388,6 +490,12 @@ export const showtimesData = [
       student: 300,
       child: 270,
       senior: 270
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 50,
     availableSeats: generateSeats(50, "hall_3"),
@@ -412,6 +520,12 @@ export const showtimesData = [
       child: 270,
       senior: 270
     },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
+    },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),
     bookedSeats: [],
@@ -431,7 +545,13 @@ export const showtimesData = [
       adult: 340,
       student: 300,
       child: 270,
-      senior: 270
+      senior: 0
+    },
+    ticketSold: {
+      adult: 0,
+      student: 0,
+      child: 0,
+      senior: 0
     },
     totalSeats: 40,
     availableSeats: generateSeats(40, "hall_1"),

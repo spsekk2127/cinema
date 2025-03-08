@@ -6,6 +6,24 @@ export const theatersData = [
     region: "north",
     address: "台北市信義區松壽路20號",
     phone: "02-2345-6789",
+    ticketTypes: {
+      adult: {
+        name: "全票",
+        price: 340
+      },
+      student: {
+        name: "學生票",
+        price: 300
+      },
+      child: {
+        name: "兒童票",
+        price: 270
+      },
+      senior: {
+        name: "敬老票",
+        price: 270
+      }
+    },
     halls: [
       { 
         id: "hall_1", 
@@ -16,6 +34,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 20
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 10
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 5
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -27,6 +63,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 23
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 11
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -38,6 +92,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 25
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 13
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 6
+          }
         }
       }
     ],
@@ -49,6 +121,24 @@ export const theatersData = [
     region: "central",
     address: "台中市西屯區台灣大道三段251號13樓",
     phone: "04-2345-6789",
+    ticketTypes: {
+      adult: {
+        name: "全票",
+        price: 340
+      },
+      student: {
+        name: "學生票",
+        price: 300
+      },
+      child: {
+        name: "兒童票",
+        price: 270
+      },
+      senior: {
+        name: "敬老票",
+        price: 270
+      }
+    },
     halls: [
       { 
         id: "hall_1", 
@@ -59,6 +149,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 20
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 10
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 5
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -70,6 +178,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 23
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 11
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -81,6 +207,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 25
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 13
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 6
+          }
         }
       }
     ],
@@ -92,6 +236,24 @@ export const theatersData = [
     region: "south",
     address: "高雄市前鎮區中華五路789號8樓",
     phone: "07-2345-6789",
+    ticketTypes: {
+      adult: {
+        name: "全票",
+        price: 340
+      },
+      student: {
+        name: "學生票",
+        price: 300
+      },
+      child: {
+        name: "兒童票",
+        price: 270
+      },
+      senior: {
+        name: "敬老票",
+        price: 270
+      }
+    },
     halls: [
       { 
         id: "hall_1", 
@@ -102,6 +264,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 20
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 10
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 5
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -113,6 +293,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 23
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 11
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 5
+          }
         }
       },
       { 
@@ -124,6 +322,24 @@ export const theatersData = [
           rows: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
           seatsPerRow: 5,
           walkwayAfterColumn: 3
+        },
+        ticketQuota: {
+          adult: {
+            percentage: 50,
+            maxPerShow: 25
+          },
+          student: {
+            percentage: 25,
+            maxPerShow: 13
+          },
+          child: {
+            percentage: 12.5,
+            maxPerShow: 6
+          },
+          senior: {
+            percentage: 12.5,
+            maxPerShow: 6
+          }
         }
       }
     ],
