@@ -219,6 +219,226 @@ export const showtimesData = [
     status: "available",
     createdAt: new Date(),
     updatedAt: new Date()
+  },
+
+  // 為奇異博士2新增場次 (台北、台中)
+  {
+    id: "showtime_011",
+    movieId: "movie_001",
+    theaterId: "theater_north",
+    hallId: "hall_1",
+    date: "2024-03-20",
+    startTime: "19:30",
+    endTime: "21:45",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 40,
+    availableSeats: generateSeats(40, "hall_1"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: "showtime_012",
+    movieId: "movie_001",
+    theaterId: "theater_central",
+    hallId: "hall_2",
+    date: "2024-03-20",
+    startTime: "20:00",
+    endTime: "22:15",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 45,
+    availableSeats: generateSeats(45, "hall_2"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
+  // 為蜘蛛人新增場次 (台中、高雄)
+  {
+    id: "showtime_013",
+    movieId: "movie_002",
+    theaterId: "theater_central",
+    hallId: "hall_1",
+    date: "2024-03-20",
+    startTime: "21:00",
+    endTime: "23:20",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 40,
+    availableSeats: generateSeats(40, "hall_1"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: "showtime_014",
+    movieId: "movie_002",
+    theaterId: "theater_south",
+    hallId: "hall_2",
+    date: "2024-03-20",
+    startTime: "21:30",
+    endTime: "23:50",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 45,
+    availableSeats: generateSeats(45, "hall_2"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
+  // 為玩具總動員5新增場次 (台北、高雄)
+  {
+    id: "showtime_015",
+    movieId: "movie_003",
+    theaterId: "theater_north",
+    hallId: "hall_2",
+    date: "2024-03-20",
+    startTime: "17:30",
+    endTime: "19:25",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 45,
+    availableSeats: generateSeats(45, "hall_2"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: "showtime_016",
+    movieId: "movie_003",
+    theaterId: "theater_south",
+    hallId: "hall_3",
+    date: "2024-03-20",
+    startTime: "19:45",
+    endTime: "21:40",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 50,
+    availableSeats: generateSeats(50, "hall_3"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
+  // 為蜘蛛人：返校日新增場次 (台北、台中)
+  {
+    id: "showtime_017",
+    movieId: "movie_004",
+    theaterId: "theater_north",
+    hallId: "hall_3",
+    date: "2024-03-20",
+    startTime: "22:00",
+    endTime: "00:13",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 50,
+    availableSeats: generateSeats(50, "hall_3"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: "showtime_018",
+    movieId: "movie_004",
+    theaterId: "theater_central",
+    hallId: "hall_3",
+    date: "2024-03-20",
+    startTime: "22:30",
+    endTime: "00:43",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 50,
+    availableSeats: generateSeats(50, "hall_3"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
+  // 為魔物獵人新增場次 (台中、高雄)
+  {
+    id: "showtime_019",
+    movieId: "movie_005",
+    theaterId: "theater_central",
+    hallId: "hall_1",
+    date: "2024-03-20",
+    startTime: "23:00",
+    endTime: "01:13",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 40,
+    availableSeats: generateSeats(40, "hall_1"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    id: "showtime_020",
+    movieId: "movie_005",
+    theaterId: "theater_south",
+    hallId: "hall_1",
+    date: "2024-03-20",
+    startTime: "23:30",
+    endTime: "01:43",
+    price: {
+      adult: 340,
+      student: 300,
+      child: 270,
+      senior: 270
+    },
+    totalSeats: 40,
+    availableSeats: generateSeats(40, "hall_1"),
+    bookedSeats: [],
+    status: "available",
+    createdAt: new Date(),
+    updatedAt: new Date()
   }
 ];
 
