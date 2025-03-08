@@ -38,6 +38,7 @@ export default function MoviePage() {
 
   return (
     <MovieDetail
+      movieId={id}
       {...movie}
       onBookClick={() => alert(`開始訂票 ${movie.title}`)}
     />
