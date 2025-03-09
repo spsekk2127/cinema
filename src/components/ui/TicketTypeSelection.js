@@ -12,35 +12,40 @@ function TicketTypeSelection({ showtime, onTicketSelect }) {
   const [totalAmount, setTotalAmount] = useState(0);
   const [totalTickets, setTotalTickets] = useState(0);
 
-  // get the theater and hall data
+  // 取得影城和影廳資料
   const theater = theatersData.find((t) => t.id === showtime.theaterId);
   const hall = theater?.halls.find((h) => h.id === showtime.hallId);
 
-  // check if the onTicketSelect prop is provided
+  // 如果沒有提供 onTicketSelect 回調函數，則提供一個空函數
   if (!onTicketSelect) {
-    onTicketSelect = () => {}; // provide a default empty function
+    onTicketSelect = () => {};
   }
 
-  // calculate the max tickets for each type
+  // 計算每種票型可購買的最大數量，單次購買最多六張
   function getMaxTickets(type) {
     if (!hall) return 0;
-    const quota = hall.ticketQuota[type];
-    const sold = showtime.ticketSold[type];
-    const remaining = quota.maxPerShow - sold;
-    return Math.min(remaining, 6 - totalTickets + selectedTickets[type]);
+    const quota = hall.ticketQuota[type]; //影廳票種配置
+    const sold = showtime.ticketSold[type]; //影廳票種已售出
+    const remaining = quota.maxPerShow - sold; //影廳票種剩餘
+    return Math.min(remaining, 6 - totalTickets + selectedTickets[type]); //影廳票種剩餘票數
   }
 
-  // handle the ticket change
+  // 票數變更
+  // type:票種
+  // delta:票數變更
+  // newCount:票數變更後的票數
+  // newTotal:票數變更後的總票數
+
   function handleTicketChange(type, delta) {
-    const newCount = selectedTickets[type] + delta;
-    const newTotal = totalTickets + delta;
+    const newCount = selectedTickets[type] + delta; //票數變更
+    const newTotal = totalTickets + delta; //總票數變更
 
     if (newCount < 0 || newCount > getMaxTickets(type)) return;
     if (newTotal > 6) return;
 
     const newSelectedTickets = {
       ...selectedTickets,
-      [type]: newCount
+      [type]: newCount,
     };
     setSelectedTickets(newSelectedTickets);
 
@@ -54,11 +59,11 @@ function TicketTypeSelection({ showtime, onTicketSelect }) {
 
     setTotalAmount(amount);
     setTotalTickets(count);
-    
+
     // 呼叫父元件的回調函數
-    onTicketSelect({ 
-      selectedTickets: newSelectedTickets, 
-      totalAmount: amount 
+    onTicketSelect({
+      selectedTickets: newSelectedTickets,
+      totalAmount: amount,
     });
   }
 
