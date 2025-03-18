@@ -10,6 +10,8 @@ import { theatersData } from "@/data/theaters";
 import TheaterButton from "@/components/ui/TheaterButton";
 import ShowtimeButton from "@/components/ui/ShowtimeButton";
 import TicketTypeSelection from "@/components/ui/TicketTypeSelection";
+import SeatSelection from "@/components/ui/SeatSelection";
+import CustomerForm from "@/components/ui/CustomerForm";
 
 export default function MovieDetail({
   title,
@@ -28,6 +30,8 @@ export default function MovieDetail({
   const [error, setError] = useState(null);
   const [selectedTheater, setSelectedTheater] = useState(null);
   const [selectedShowtime, setSelectedShowtime] = useState(null);
+  const [selectedSeats, setSelectedSeats] = useState([]);
+  const [ticketInfo, setTicketInfo] = useState(null);
 
   // useEffect(() => {
   //   const fetchData = async () => {
@@ -77,11 +81,40 @@ export default function MovieDetail({
     availableTheaterIds.includes(theater.id)
   );
 
+  // 根據選擇的影城，過濾出相對應的場次
   const availableShowtimes = selectedTheater
     ? movieShowtimes.filter(
         (showtime) => showtime.theaterId === selectedTheater.id
       )
     : [];
+
+  // 處理票種選擇
+  const handleTicketSelect = (info) => {
+    setTicketInfo(info);
+    setSelectedSeats([]); // 重置座位選擇
+  };
+
+  // 處理座位選擇
+  const handleSeatSelect = (seats) => {
+    setSelectedSeats(seats);
+  };
+
+  const handleBookingSubmit = async (customerData) => {
+    try {
+      // 這裡可以加入訂票 API 的呼叫
+      console.log('訂票資料：', {
+        showtime: selectedShowtime,
+        tickets: ticketInfo,
+        seats: selectedSeats,
+        customer: customerData
+      });
+      
+      // 成功後可以導向到訂票成功頁面
+      // router.push('/booking-success');
+    } catch (error) {
+      console.error('訂票失敗：', error);
+    }
+  };
 
   return (
     <div className="bg-gray-900 min-h-screen p-8">
@@ -136,6 +169,8 @@ export default function MovieDetail({
             </div>
           </div>
         </div>
+
+        {/* 選擇影城 */}
         <div className="bg-gray-800 p-6 rounded-lg mt-2">
           <h2 className="text-white text-xl font-bold mb-4">線上訂票</h2>
           <div className="grid gap-4">
@@ -174,8 +209,36 @@ export default function MovieDetail({
           )}
         </div>
 
+        {/* 選擇票種 */}
         {selectedShowtime && (
-          <TicketTypeSelection showtime={selectedShowtime} />
+          <div className="mt-6">
+            <TicketTypeSelection 
+              showtime={selectedShowtime} 
+              onTicketSelect={handleTicketSelect}
+            />
+          </div>
+        )}
+
+        {/* 選擇座位 - 只在選擇票種後顯示 */}
+        {ticketInfo && ticketInfo.totalAmount > 0 && (
+          <div className="mt-6">
+            <SeatSelection
+              showtime={selectedShowtime}
+              maxSeats={Object.values(ticketInfo.selectedTickets).reduce((a, b) => a + b, 0)}
+              onSeatSelect={handleSeatSelect}
+              selectedSeats={selectedSeats}
+            />
+          </div>
+        )}
+
+        {/* 當座位選擇完成後顯示表單 */}
+        {ticketInfo && 
+         selectedSeats.length === Object.values(ticketInfo.selectedTickets).reduce((a, b) => a + b, 0) && (
+          <CustomerForm 
+            onSubmit={handleBookingSubmit}
+            ticketInfo={ticketInfo}
+            selectedSeats={selectedSeats}
+          />
         )}
       </div>
     </div>
