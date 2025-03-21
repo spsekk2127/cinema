@@ -1,9 +1,17 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 
 export default function Navbar() {
   const [RWDisOpen, setRWDisOpen] = useState(false);
+  const pathname = usePathname();
+
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <nav className="bg-blue-500 shadow-lg">
       <div className="mx-auto px-4">
