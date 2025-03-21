@@ -175,7 +175,7 @@ export default function MovieDetail({
           <h2 className="text-white text-xl font-bold mb-4">線上訂票</h2>
           <div className="grid gap-4">
             <div>
-              <label className="block text-sm font-medium mb-2">選擇影城</label>
+              <label className="block text-white text-sm font-medium mb-2">選擇影城</label>
               <div className="flex flex-wrap gap-4">
                 {availableTheaters?.map((theater) => (
                   <TheaterButton
@@ -194,7 +194,7 @@ export default function MovieDetail({
 
           {selectedTheater && (
             <div className="mt-6">
-              <h2 className="text-xl font-bold mb-3">選擇場次</h2>
+              <h2 className="text-xl text-white font-bold mb-3">選擇場次</h2>
               <div className="flex flex-wrap gap-2">
                 {availableShowtimes?.map((showtime) => (
                   <ShowtimeButton

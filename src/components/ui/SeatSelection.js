@@ -29,7 +29,7 @@ const SeatSelection = ({ showtime, maxSeats, onSeatSelect, selectedSeats }) => {
       </div>
 
       {/* 座位狀態範例 */}
-      <div className="flex gap-4 mb-6 justify-center">
+      <div className="flex gap-4 mb-6 justify-center text-white">
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 bg-gray-200 rounded"></div>
           <span>可選擇</span>
@@ -83,7 +83,7 @@ const SeatSelection = ({ showtime, maxSeats, onSeatSelect, selectedSeats }) => {
 
       {/* 已選座位資訊 */}
       <div className="mt-6">
-        <h3 className="font-bold mb-2">已選座位：</h3>
+        <h3 className="font-bold mb-2 text-white">已選座位：</h3>
         <div className="flex flex-wrap gap-2">
           {selectedSeats.map((seatId) => (
             <span key={seatId} className="px-2 py-1 bg-blue-600 rounded text-center text-white">
