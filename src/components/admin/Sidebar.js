@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/admin/ui/button";
 import {
   LayoutDashboard,
+  Ticket,
   Film,
   Building,
   Calendar,
@@ -18,6 +19,7 @@ import { useState } from "react";
 
 const menuItems = [
   { name: "首頁", icon: LayoutDashboard, path: "/admin" },
+  { name: "票券管理", icon: Ticket, path: "/admin/tickets" },
   { name: "電影管理", icon: Film, path: "/admin/movies" },
   { name: "影城管理", icon: Building, path: "/admin/theaters" },
   { name: "場次管理", icon: Calendar, path: "/admin/showtimes" },

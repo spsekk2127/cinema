@@ -1,5 +1,6 @@
 import { collection, addDoc, getDocs, doc, setDoc } from "firebase/firestore";
 import { db } from "@/firebase/config";
+import { ticketsData } from "@/data/tickets";
 import { moviesData } from "@/data/movieData";
 import { theatersData } from "@/data/theaters.js";
 import { showtimesData } from "@/data/showtimes.js";
@@ -53,6 +54,7 @@ export async function GET() {
   try {
     // upload data to firestore
     const results = {
+      tickets: await uploadCollectionData("tickets_Data", ticketsData),
       movies: await uploadCollectionData("movies_Data", moviesData),
       theaters: await uploadCollectionData("theaters_Data", theatersData),
       showtimes: await uploadCollectionData("showtimes_Data", showtimesData),
