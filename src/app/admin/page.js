@@ -28,29 +28,29 @@ import {
 } from "@/components/admin/ui/chart";
 
 const chartData_bar_chart = [
+  { month: "October", desktop: 142 },
+  { month: "November", desktop: 210 },
+  { month: "December", desktop: 325 },
   { month: "January", desktop: 186 },
   { month: "February", desktop: 305 },
   { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
 ];
 
 const chartData_pie_donut = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  { browser: "adult", visitors: 275, fill: "var(--color-adult)" },
+  { browser: "student", visitors: 200, fill: "var(--color-student)" },
+  { browser: "child", visitors: 187, fill: "var(--color-child)" },
+  { browser: "senior", visitors: 173, fill: "var(--color-senior)" },
+  { browser: "disability", visitors: 90, fill: "var(--color-disability)" },
 ];
 
 const chartData_line_chart = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
+  { month: "October", desktop: 142200 },
+  { month: "November", desktop: 211000 },
+  { month: "December", desktop: 332500 },
+  { month: "January", desktop: 188600 },
+  { month: "February", desktop: 130500 },
+  { month: "March", desktop: 120850 },
 ];
 
 const chartConfig_bar_chart = {
@@ -64,31 +64,31 @@ const chartConfig_pie_donut = {
   visitors: {
     label: "Visitors",
   },
-  chrome: {
-    label: "Chrome",
+  adult: {
+    label: "全票",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
+  student: {
+    label: "學生票",
     color: "hsl(var(--chart-2))",
   },
-  firefox: {
-    label: "Firefox",
+  child: {
+    label: "兒童票",
     color: "hsl(var(--chart-3))",
   },
-  edge: {
-    label: "Edge",
+  senior: {
+    label: "敬老票",
     color: "hsl(var(--chart-4))",
   },
-  other: {
-    label: "Other",
+  disability: {
+    label: "愛心票",
     color: "hsl(var(--chart-5))",
   },
 };
 
 const chartConfig_line_chart = {
   desktop: {
-    label: "Desktop",
+    label: "營收",
     color: "hsl(var(--chart-2))",
   },
 };
@@ -112,8 +112,8 @@ export default function Component() {
             <DollarSign className="h-4 w-4 text-gray-400" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-white">$45,231.89</div>
-            <p className="text-xs text-gray-400">+20.1% from last month</p>
+            <div className="text-2xl font-bold text-white">$120,850</div>
+            <p className="text-xs text-gray-400"></p>
           </CardContent>
         </Card>
       </div>
@@ -122,7 +122,7 @@ export default function Component() {
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-6">
         <Card className="col-span-3 bg-gray-800 border-gray-700">
           <CardHeader className="text-gray-200">
-            <CardTitle>本週收入</CardTitle>
+            <CardTitle>本週電影觀看人次</CardTitle>
             <CardDescription></CardDescription>
           </CardHeader>
           <CardContent>
@@ -178,7 +178,7 @@ export default function Component() {
 
         <Card className="col-span-3 bg-gray-800 border-gray-700">
           <CardHeader>
-            <CardTitle className="text-gray-200">Line Chart - Linear</CardTitle>
+            <CardTitle className="text-gray-200">近六個月營收</CardTitle>
             <CardDescription></CardDescription>
           </CardHeader>
           <CardContent>
@@ -215,7 +215,7 @@ export default function Component() {
           </CardContent>
           <CardFooter className="flex-col items-start gap-2 text-sm">
             <div className="leading-none text-muted-foreground">
-              Showing total visitors for the last 6 months
+              Showing total revenue for the last 6 months
             </div>
           </CardFooter>
         </Card>
