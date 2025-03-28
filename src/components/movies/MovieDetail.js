@@ -139,7 +139,7 @@ export default function MovieDetail({
                 <span className="bg-yellow-500 text-black px-3 py-1 rounded-lg font-bold">
                   {rating}
                 </span>
-                <span>{duration}</span>
+                <span>{duration}分鐘</span>
                 <span>{releaseDate}</span>
               </div>
 
