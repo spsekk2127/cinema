@@ -48,7 +48,7 @@ async function getCollections() {
       "showtimes_Data",
       "users_Data",
       "bookings_Data",
-      "promotions_Data",
+      "tickets_Data",
       "orders_Data"
     ];
 

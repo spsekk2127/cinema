@@ -40,11 +40,17 @@ export const addMovie = async (movieData) => {
 };
 
 export const updateMovie = async (id, movieData) => {
-  const docRef = doc(moviesRef, id);
-  return await updateDoc(docRef, {
-    ...movieData,
-    updatedAt: new Date()
-  });
+  try {
+    const docRef = doc(moviesRef, id);
+    await updateDoc(docRef, {
+      ...movieData,
+      updatedAt: new Date()
+    });
+    return true;
+  } catch (error) {
+    console.error('更新電影資料時發生錯誤:', error);
+    throw error;
+  }
 };
 
 export const deleteMovie = async (id) => {

@@ -12,7 +12,7 @@ export const moviesData = [
         "奇異博士施展禁忌咒語，打開多重宇宙的大門，卻因此威脅到人類生存，必須面對來自多重宇宙的強大對手。",
       director: "山姆·雷米",
       cast: ["班尼迪克·康柏拜區", "伊莉莎白·歐森"],
-      status: "showing",  // showing, coming_soon, ended
+      status: "true",
     },
     {
       id: "movie_002",
@@ -27,7 +27,7 @@ export const moviesData = [
         "邁爾斯·莫拉雷斯在多重宇宙中展開全新冒險，與其他宇宙的蜘蛛人聯手對抗更強大的威脅。",
       director: "杜沃金·韋伯",
       cast: ["沙梅克·摩爾", "海莉·斯坦菲爾德"],
-      status: "showing",  // showing, coming_soon, ended
+      status: "true",
     },
     {
       id: "movie_003",
@@ -42,7 +42,7 @@ export const moviesData = [
         "胡迪和巴斯光年帶領玩具們展開全新冒險，探索友情和成長的意義。",
       director: "皮特·道格特",
       cast: ["湯姆·漢克斯", "提姆·艾倫"],
-      status: "showing",  // showing, coming_soon, ended
+      status: "true",
     },
     {
       id: "movie_004",
@@ -57,7 +57,7 @@ export const moviesData = [
         "在鋼鐵人的指導下，彼得·帕克努力平衡高中生活與超級英雄的雙重身份，同時還要面對禿鷹等強大反派的威脅。",
       director: "喬恩·華茲",
       cast: ["湯姆·霍蘭德", "麥可·基頓", "羅伯特·唐尼·奇"],
-      status: "showing",  // showing, coming_soon, ended
+      status: "true",
     },
     {
       id: "movie_005",
@@ -72,6 +72,6 @@ export const moviesData = [
         "一群精英獵人在充滿危險的世界中追捕巨大魔物，守護他們的家園。",
       director: "保羅·安德森",
       cast: ["米拉·喬娃維琪", "托尼·嘉"],
-      status: "showing",  // showing, coming_soon, ended
+      status: "true",
     },
   ];
