@@ -78,30 +78,43 @@ export default function MoviesPage() {
     <div className="p-6 space-y-6 bg-gray-900 min-h-screen">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold text-white">電影管理</h1>
-        <Button onClick={() => setIsDialogOpen(true)}>
-          <Plus className="mr-2 h-4 w-4" />
-          新增電影
-        </Button>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-10 w-10 bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:text-blue-400"
+                onClick={() => setIsDialogOpen(true)}
+              >
+                <Plus className="h-4 w-4 text-center" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>新增票種</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
 
       <div className="bg-gray-800 rounded-lg border border-gray-700">
         <Table>
           <TableHeader>
-            <TableRow className="border-gray-700">
-              <TableHead className="text-gray-200 w-[15%]">電影海報</TableHead>
+            <TableRow className="border-gray-700 text-base hover:bg-gray-700">
+              <TableHead className="text-gray-200 ps-3 w-[15%]">電影海報</TableHead>
               <TableHead className="text-gray-200 w-[20%]">電影名稱</TableHead>
               <TableHead className="text-gray-200 w-[30%]">簡介</TableHead>
               <TableHead className="text-gray-200 w-[15%]">上映日期</TableHead>
               <TableHead className="text-gray-200 w-[10%]">狀態</TableHead>
-              <TableHead className="text-gray-200 w-[10%] text-right">
+              <TableHead className="text-gray-200 w-[10%] pe-4 text-right">
                 操作
               </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {movies.map((movie) => (
-              <TableRow key={movie.id} className="border-gray-700">
-                <TableCell className="text-gray-200">
+              <TableRow key={movie.id} className="border-gray-700 text-base hover:bg-gray-700">
+                <TableCell className="text-gray-200 ps-3">
                   <div className="relative w-[80px] h-[120px]">
                     <Image
                       src={movie.posterUrl}
@@ -132,7 +145,7 @@ export default function MoviesPage() {
                     {STATUS_CONFIG[movie.status]?.label || "未知狀態"}
                   </span>
                 </TableCell>
-                <TableCell className="text-right">
+                <TableCell className="text-right pe-4">
                   <div className="flex justify-end gap-2">
                     <TooltipProvider>
                       <Tooltip>
@@ -140,7 +153,7 @@ export default function MoviesPage() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:text-blue-400"
+                            className="h-10 w-10 bg-blue-500/10 text-blue-500 hover:bg-blue-500/20 hover:text-blue-400"
                             onClick={() => handleEdit(movie)}
                           >
                             <Pencil className="h-4 w-4" />
@@ -156,7 +169,7 @@ export default function MoviesPage() {
                           <Button
                             variant="ghost"
                             size="icon"
-                            className="h-8 w-8 bg-red-500/10 text-red-500 hover:bg-red-500/20 hover:text-red-400"
+                            className="h-10 w-10 bg-red-500/10 text-red-500 hover:bg-red-500/20 hover:text-red-400"
                             onClick={() => handleDelete(movie.id)}
                           >
                             <Trash2 className="h-4 w-4" />

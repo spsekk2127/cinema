@@ -84,7 +84,7 @@ export default function TicketsPage() {
       <div className="bg-gray-800 rounded-lg border border-gray-700">
         <Table>
           <TableHeader>
-            <TableRow className="border-gray-700 text-base">
+            <TableRow className="border-gray-700 text-base hover:bg-gray-700">
               <TableHead className="text-gray-200 ps-3 w-[25%]">
                 票種名稱
               </TableHead>
@@ -102,7 +102,7 @@ export default function TicketsPage() {
           </TableHeader>
           <TableBody>
             {tickets.map((ticket) => (
-              <TableRow key={ticket.id} className="border-gray-700 text-base">
+              <TableRow key={ticket.id} className="border-gray-700 text-base hover:bg-gray-700">
                 <TableCell className="text-gray-200 ps-3 w-[25%]">
                   {ticket.name}
                 </TableCell>
