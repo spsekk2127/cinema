@@ -13,7 +13,7 @@ import { Button } from "@/components/admin/ui/button";
 import { Label } from "@/components/admin/ui/label";
 import { Switch } from "@/components/admin/ui/switch";
 import { useToast } from "@/hooks/admin/use-toast";
-import { addTicket, updateTicket } from "@/services/admin/ticket_data_service";
+import { addTicket, updateTicket } from "@/services/admin/ticket_data_admin_service";
 
 export default function TicketDialog({ open, onOpenChange, ticket, onClose }) {
   const { toast } = useToast();

@@ -13,7 +13,7 @@ import {
 } from "@/components/admin/ui/table";
 import { useToast } from "@/hooks/admin/use-toast";
 import TicketDialog from "@/components/admin/TicketDialog";
-import { getAllTickets, deleteTicket } from "@/services/admin/ticket_data_service";
+import { getAllTickets, deleteTicket } from "@/services/admin/ticket_data_admin_service";
 import {
   Tooltip,
   TooltipContent,
