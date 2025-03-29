@@ -27,15 +27,11 @@ import {
 } from "@/services/admin/movies_data_admin_Service";
 
 const STATUS_CONFIG = {
-  showing: {
+  true: {
     label: "上映中",
     className: "bg-green-500/10 text-green-500",
   },
-  coming_soon: {
-    label: "即將上映",
-    className: "bg-yellow-500/10 text-yellow-500",
-  },
-  ended: {
+  false: {
     label: "已下檔",
     className: "bg-gray-500/10 text-gray-500",
   },
@@ -127,16 +123,14 @@ export default function MoviesPage() {
                   {movie.releaseDate}
                 </TableCell>
                 <TableCell className="text-gray-200">
-                  <TableCell className="text-gray-200">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs ${
-                        STATUS_CONFIG[movie.status]?.className ||
-                        "bg-gray-500/10 text-gray-500"
-                      }`}
-                    >
-                      {STATUS_CONFIG[movie.status]?.label || "未知狀態"}
-                    </span>
-                  </TableCell>
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs ${
+                      STATUS_CONFIG[movie.status]?.className ||
+                      "bg-gray-500/10 text-gray-500"
+                    }`}
+                  >
+                    {STATUS_CONFIG[movie.status]?.label || "未知狀態"}
+                  </span>
                 </TableCell>
                 <TableCell className="text-right">
                   <div className="flex justify-end gap-2">

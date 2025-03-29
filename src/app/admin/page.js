@@ -122,7 +122,7 @@ export default function Component() {
       <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-6">
         <Card className="col-span-3 bg-gray-800 border-gray-700">
           <CardHeader className="text-gray-200">
-            <CardTitle>本週電影觀看人次</CardTitle>
+            <CardTitle>電影觀看人次</CardTitle>
             <CardDescription></CardDescription>
           </CardHeader>
           <CardContent>
