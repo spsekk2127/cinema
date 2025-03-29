@@ -78,7 +78,7 @@ export default function TheatersPage() {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>新增票種</p>
+              <p>新增影城</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -88,12 +88,12 @@ export default function TheatersPage() {
         <Table>
           <TableHeader>
             <TableRow className="border-gray-700 text-base hover:bg-gray-700">
-              <TableHead className="text-gray-200 ps-3 w-[15%]">影城名稱</TableHead>
-              <TableHead className="text-gray-200 w-[10%]">地區</TableHead>
-              <TableHead className="text-gray-200 w-[35%]">地址</TableHead>
-              <TableHead className="text-gray-200 w-[15%]">聯絡電話</TableHead>
-              <TableHead className="text-gray-200 text-center w-[15%]">影廳數量</TableHead>
-              <TableHead className="text-gray-200 w-[10%] pe-4 text-right">
+              <TableHead className="text-gray-400 ps-3 w-[15%]">影城名稱</TableHead>
+              <TableHead className="text-gray-400 w-[10%]">地區</TableHead>
+              <TableHead className="text-gray-400 w-[35%]">地址</TableHead>
+              <TableHead className="text-gray-400 w-[15%]">聯絡電話</TableHead>
+              <TableHead className="text-gray-400 text-center w-[15%]">影廳數量</TableHead>
+              <TableHead className="text-gray-400 w-[10%] pe-4 text-right">
                 操作
               </TableHead>
             </TableRow>

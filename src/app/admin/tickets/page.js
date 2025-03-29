@@ -85,17 +85,17 @@ export default function TicketsPage() {
         <Table>
           <TableHeader>
             <TableRow className="border-gray-700 text-base hover:bg-gray-700">
-              <TableHead className="text-gray-200 ps-3 w-[25%]">
+              <TableHead className="text-gray-400 ps-3 w-[25%]">
                 票種名稱
               </TableHead>
-              <TableHead className="text-gray-200 w-[20%]">代碼</TableHead>
-              <TableHead className="text-gray-200 text-center w-[15%]">
+              <TableHead className="text-gray-400 w-[20%]">代碼</TableHead>
+              <TableHead className="text-gray-400 text-center w-[15%]">
                 基本票價
               </TableHead>
-              <TableHead className="text-gray-200 text-center w-[20%]">
+              <TableHead className="text-gray-400 text-center w-[20%]">
                 狀態
               </TableHead>
-              <TableHead className="text-right text-gray-200 pe-4 w-[20%]">
+              <TableHead className="text-right text-gray-400 pe-4 w-[20%]">
                 操作
               </TableHead>
             </TableRow>

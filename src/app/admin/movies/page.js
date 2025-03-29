@@ -91,7 +91,7 @@ export default function MoviesPage() {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>新增票種</p>
+              <p>新增電影</p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -101,12 +101,12 @@ export default function MoviesPage() {
         <Table>
           <TableHeader>
             <TableRow className="border-gray-700 text-base hover:bg-gray-700">
-              <TableHead className="text-gray-200 ps-3 w-[15%]">電影海報</TableHead>
-              <TableHead className="text-gray-200 w-[20%]">電影名稱</TableHead>
-              <TableHead className="text-gray-200 w-[30%]">簡介</TableHead>
-              <TableHead className="text-gray-200 w-[15%]">上映日期</TableHead>
-              <TableHead className="text-gray-200 w-[10%]">狀態</TableHead>
-              <TableHead className="text-gray-200 w-[10%] pe-4 text-right">
+              <TableHead className="text-gray-400 ps-3 w-[15%]">電影海報</TableHead>
+              <TableHead className="text-gray-400 w-[20%]">電影名稱</TableHead>
+              <TableHead className="text-gray-400 w-[30%]">簡介</TableHead>
+              <TableHead className="text-gray-400 w-[15%]">上映日期</TableHead>
+              <TableHead className="text-gray-400 w-[10%]">狀態</TableHead>
+              <TableHead className="text-gray-400 w-[10%] pe-4 text-right">
                 操作
               </TableHead>
             </TableRow>
