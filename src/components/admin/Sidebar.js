@@ -23,7 +23,7 @@ const menuItems = [
   { name: "電影管理", icon: Film, path: "/admin/movies" },
   { name: "影城管理", icon: Building, path: "/admin/theaters" },
   { name: "場次管理", icon: Calendar, path: "/admin/showtimes" },
-  { name: "訂單管理", icon: BookText, path: "/admin/bookings" },
+  { name: "訂單管理", icon: BookText, path: "/admin/orders" },
   { name: "設定", icon: Settings, path: "/admin/settings" },
 ];
 

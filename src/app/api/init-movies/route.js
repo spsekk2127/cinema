@@ -59,7 +59,7 @@ export async function GET() {
       theaters: await uploadCollectionData("theaters_Data", theatersData),
       showtimes: await uploadCollectionData("showtimes_Data", showtimesData),
       users: await uploadCollectionData("users_Data", usersData),
-      bookings: await uploadCollectionData("bookings_Data", bookingsData),
+      orders: await uploadCollectionData("orders_Data", bookingsData),
     };
 
     // check if any data failed to upload

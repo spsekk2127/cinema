@@ -2,8 +2,15 @@ export const bookingsData = [
   {
     id: "bookings_001",
     userId: "user_001",
+    userName: "王大明",
+    movieId: "movie_001",
+    movieName: "奇異博士2",
+    theaterId: "theater_north",
+    theaterName: "台北影城",
     showtimeId: "showtime_001",
     seats: ["A1", "A2"],
+    date: "2024-03-20",
+    startTime: "14:30",
     totalAmount: 680, // 2張全票
     ticketType: {
       adult: 2,
@@ -20,9 +27,16 @@ export const bookingsData = [
   {
     id: "bookings_002",
     userId: "user_002",
-    showtimeId: "showtime_003",
-    seats: ["B3", "B4", "B5"],
-    totalAmount: 870, // 1張全票，2張學生票
+    userName: "林小美",
+    movieId: "movie_003",
+    movieName: "玩具總動員5",
+    theaterId: "theater_south",
+    theaterName: "高雄影城",
+    showtimeId: "showtime_006",
+    date: "2024-03-20",
+    startTime: "14:30",
+    seats: ["C7", "C8"],
+    totalAmount: 540,
     ticketType: {
       adult: 1,
       student: 2,
@@ -38,7 +52,14 @@ export const bookingsData = [
   {
     id: "bookings_003",
     userId: "user_003",
+    userName: "張三",
+    movieId: "movie_002",
+    movieName: "蜘蛛人：無家日",
+    theaterId: "theater_central",
+    theaterName: "台中影城",
     showtimeId: "showtime_005",
+    date: "2024-03-20",
+    startTime: "14:30",
     seats: ["C1", "C2", "C3", "C4"],
     totalAmount: 1220, // 2張全票，2張敬老票
     ticketType: {
