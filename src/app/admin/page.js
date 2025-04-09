@@ -10,6 +10,7 @@ import {
   XAxis,
   Line,
   LineChart,
+  LabelList,
 } from "recharts";
 
 import {
@@ -53,9 +54,18 @@ const chartData_line_chart = [
   { month: "March", desktop: 120850 },
 ];
 
+const chartData_bar_chart_multiple = [
+  { month: "January", desktop: 186, mobile: 80 },
+  { month: "February", desktop: 305, mobile: 200 },
+  { month: "March", desktop: 237, mobile: 120 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 130 },
+  { month: "June", desktop: 214, mobile: 140 },
+];
+
 const chartConfig_bar_chart = {
   desktop: {
-    label: "Desktop",
+    label: "營收",
     color: "hsl(var(--chart-2))",
   },
 };
@@ -89,6 +99,17 @@ const chartConfig_pie_donut = {
 const chartConfig_line_chart = {
   desktop: {
     label: "營收",
+    color: "hsl(var(--chart-2))",
+  },
+};
+
+const chartConfig_bar_chart_multiple = {
+  desktop: {
+    label: "Desktop",
+    color: "hsl(var(--chart-1))",
+  },
+  mobile: {
+    label: "Mobile",
     color: "hsl(var(--chart-2))",
   },
 };
@@ -127,7 +148,13 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <ChartContainer config={chartConfig_bar_chart}>
-              <BarChart accessibilityLayer data={chartData_bar_chart}>
+              <BarChart
+                accessibilityLayer
+                data={chartData_bar_chart}
+                margin={{
+                  top: 20,
+                }}
+              >
                 <CartesianGrid vertical={false} />
                 <XAxis
                   dataKey="month"
@@ -140,7 +167,14 @@ export default function Component() {
                   cursor={false}
                   content={<ChartTooltipContent hideLabel />}
                 />
-                <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
+                <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8}>
+                  <LabelList
+                    position="top"
+                    offset={12}
+                    className="fill-slate-50"
+                    fontSize={12}
+                  />
+                </Bar>
               </BarChart>
             </ChartContainer>
           </CardContent>
@@ -150,7 +184,6 @@ export default function Component() {
             </div>
           </CardFooter>
         </Card>
-
         <Card className="col-span-3 bg-gray-800 border-gray-700">
           <CardHeader>
             <CardTitle className="text-gray-200">票種分布</CardTitle>
@@ -174,6 +207,30 @@ export default function Component() {
               </PieChart>
             </ChartContainer>
           </CardContent>
+          <CardFooter className="flex items-start gap-2 justify-end">
+            <div className="leading-none bg-gray-700 px-4 py-3 rounded-md">
+              <div className="grid grid-cols-2 gap-3">
+                {chartData_pie_donut.map((item) => (
+                  <div 
+                    key={item.browser} 
+                    className="flex items-center gap-2"
+                  >
+                    <div 
+                      className="w-3 h-3 rounded-sm flex-shrink-0 border-2 border-gray-400" 
+                      style={{ 
+                        backgroundColor: `hsl(var(--chart-${
+                          chartData_pie_donut.findIndex(d => d.browser === item.browser) + 1
+                        }))`
+                      }}
+                    />
+                    <span className="text-md text-gray-200">
+                      {chartConfig_pie_donut[item.browser]?.label || item.browser}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </CardFooter>
         </Card>
 
         <Card className="col-span-3 bg-gray-800 border-gray-700">
@@ -216,6 +273,40 @@ export default function Component() {
           <CardFooter className="flex-col items-start gap-2 text-sm">
             <div className="leading-none text-muted-foreground">
               Showing total revenue for the last 6 months
+            </div>
+          </CardFooter>
+        </Card>
+
+        <Card className="col-span-3 bg-gray-800 border-gray-700">
+          <CardHeader>
+            <CardTitle className="text-gray-200">
+              去年營收比較
+            </CardTitle>
+            <CardDescription></CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ChartContainer config={chartConfig_bar_chart_multiple}>
+              <BarChart accessibilityLayer data={chartData_bar_chart_multiple}>
+                <CartesianGrid vertical={false} />
+                <XAxis
+                  dataKey="month"
+                  tickLine={false}
+                  tickMargin={10}
+                  axisLine={false}
+                  tickFormatter={(value) => value.slice(0, 3)}
+                />
+                <ChartTooltip
+                  cursor={false}
+                  content={<ChartTooltipContent indicator="dashed" />}
+                />
+                <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
+                <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
+              </BarChart>
+            </ChartContainer>
+          </CardContent>
+          <CardFooter className="flex-col items-start gap-2 text-sm">
+            <div className="leading-none text-muted-foreground">
+              Showing total visitors for the last 6 months
             </div>
           </CardFooter>
         </Card>
